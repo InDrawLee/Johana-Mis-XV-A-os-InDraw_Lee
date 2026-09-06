@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Johana | Mis XV Años — InDraw_Lee</title>
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           CONFIGURACIÓN GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background:
+                radial-gradient(circle at top left, #552d43 0%, transparent 35%),
+                radial-gradient(circle at bottom right, #472238 0%, transparent 35%),
+                #170d13;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* =========================
+           BARRA SUPERIOR
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(23, 13, 19, 0.92);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .navbar {
+            max-width: 1250px;
+            margin: auto;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .logo {
+            width: 125px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .menu a {
+            padding: 9px 15px;
+            border-radius: 30px;
+            font-size: 13px;
+            transition: 0.3s;
+            color: #eadde3;
+        }
+
+        .menu a:hover {
+            background: #d889a9;
+            color: white;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 88vh;
+            max-width: 1250px;
+            margin: auto;
+            padding: 70px 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-text {
+            animation: aparecer 1s ease;
+        }
+
+        .small-title {
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 12px;
+            color: #d889a9;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(60px, 8vw, 105px);
+            font-weight: normal;
+            line-height: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h2 {
+            font-size: 20px;
+            font-weight: 300;
+            color: #e7ccd8;
+            margin-bottom: 30px;
+        }
+
+        .hero-description {
+            max-width: 550px;
+            color: #bdaeb5;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 22px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #c96f95;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #e18cad;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid #a96a84;
+            color: #edcbd9;
+        }
+
+        .btn-outline:hover {
+            background: #a96a84;
+        }
+
+        .hero-photo {
+            position: relative;
+        }
+
+        .hero-photo img {
+            width: 100%;
+            max-width: 500px;
+            height: 600px;
+            object-fit: cover;
+            margin: auto;
+            border-radius: 25px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+        }
+
+        .photo-decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #d889a9;
+            border-radius: 20px;
+            right: 0;
+            bottom: -20px;
+            z-index: -1;
+        }
+
+        /* =========================
+           AVISO
+        ========================= */
+
+        .notice {
+            max-width: 1100px;
+            margin: 20px auto 80px;
+            padding: 25px 30px;
+            border: 1px solid rgba(216,137,169,0.45);
+            background: rgba(85,45,67,0.35);
+            border-radius: 18px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.25);
+        }
+
+        .notice strong {
+            color: #e9a5bd;
+        }
+
+        .notice p {
+            color: #d5c3cc;
+            font-size: 14px;
+        }
+
+        /* =========================
+           SECCIONES
+        ========================= */
+
+        section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 90px 30px;
+        }
+
+        .section-heading {
+            margin-bottom: 45px;
+        }
+
+        .section-heading span {
+            color: #d889a9;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 11px;
+        }
+
+        .section-heading h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 50px;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+
+        .section-heading p {
+            max-width: 650px;
+            color: #ae9fa7;
+            margin-top: 10px;
+        }
+
+        /* =========================
+        VIDEOS
+        ========================= */
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .video-card {
+            background: rgba(54,28,42,0.75);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+            transition: 0.35s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(216,137,169,0.4);
+        }
+
+        .video-number {
+            color: #d889a9;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 22px 25px 0;
+        }
+
+        .video-card h3 {
+            padding: 5px 25px;
+            font-family: 'DM Serif Display', serif;
+            font-size: 27px;
+            font-weight: normal;
+        }
+
+        .video-description {
+            color: #aa9ba3;
+            font-size: 13px;
+            padding: 0 25px 20px;
+        }
+
+        /* ESPACIO DEL VIDEO */
+
+        .video-preview {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #0d080b;
+            overflow: hidden;
+        }
+
+        .video-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* BOTÓN */
+
+        .video-buttons {
+            display: flex;
+            padding: 20px 25px 25px;
+        }
+
+        .video-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 11px 20px;
+            border-radius: 25px;
+            background: #8e4d6a;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .video-btn:hover {
+            background: #c96f95;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FOTOS / LIGHTROOM
+        ========================= */
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .gallery-card {
+            background: rgba(54,28,42,0.75);
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.06);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+        }
+
+        .gallery-icon {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .gallery-card h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .gallery-card p {
+            color: #a99ba2;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+        /* =========================================
+        GALERÍA FOTOGRÁFICA
+        ========================================= */
+
+        .photo-preview {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 15px;
+            background: #120b10;
+        }
+
+
+        /* CONTENEDOR DE LAS FOTOGRAFÍAS */
+
+        .photo-slider {
+            display: flex;
+            width: 100%;
+            overflow-x: auto;
+
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+
+            cursor: grab;
+        }
+
+
+        /* Ocultar scrollbar */
+
+        .photo-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        /* Cursor mientras se desliza */
+
+        .photo-slider:active {
+            cursor: grabbing;
+        }
+
+
+        /* =========================================
+        FOTOGRAFÍAS
+        ========================================= */
+
+        .photo-slider img {
+            flex: 0 0 100%;
+
+            width: 100%;
+            height: 350px;
+
+            object-fit: contain;
+
+            background: #120b10;
+
+            scroll-snap-align: center;
+
+            display: block;
+        }
+
+
+        /* =========================================
+        BOTONES DE NAVEGACIÓN
+        ========================================= */
+
+        .gallery-arrow {
+            position: absolute;
+
+            top: 50%;
+            transform: translateY(-50%);
+
+            z-index: 10;
+
+            width: 48px;
+            height: 48px;
+
+            padding: 0;
+
+            border: none;
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.9);
+
+            color: #5a3d70;
+
+            font-size: 30px;
+            font-family: Arial, sans-serif;
+
+            line-height: 48px;
+            text-align: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+        }
+
+
+        /* Flecha izquierda */
+
+        .gallery-arrow.prev {
+            left: 15px;
+        }
+
+
+        /* Flecha derecha */
+
+        .gallery-arrow.next {
+            right: 15px;
+        }
+
+
+        /* Efecto hover */
+
+        .gallery-arrow:hover {
+            background: white;
+
+            transform: translateY(-50%) scale(1.08);
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* =========================================
+        INFORMACIÓN DE LA GALERÍA
+        ========================================= */
+
+        .gallery-info {
+            padding: 28px;
+        }
+
+        .gallery-info h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 30px;
+            font-weight: normal;
+            margin-bottom: 8px;
+        }
+
+        .gallery-info p {
+            color: #a99ba2;
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
+
+
+        /* =========================================
+        CELULAR
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            .photo-slider img {
+                height: 300px;
+            }
+
+            .gallery-arrow {
+                width: 42px;
+                height: 42px;
+
+                line-height: 42px;
+
+                font-size: 27px;
+            }
+
+            .gallery-arrow.prev {
+                left: 10px;
+            }
+
+            .gallery-arrow.next {
+                right: 10px;
+            }
+
+        }
+        /* =========================
+           INVITACIÓN
+        ========================= */
+        .canva-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-top: 75%;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.16);
+        }
+
+        .canva-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: none;
+        }
+        /* =========================
+           REDES
+        ========================= */
+
+        .social-section {
+            text-align: center;
+            padding-bottom: 100px;
+        }
+
+        .social-section h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 50px;
+            font-weight: normal;
+        }
+
+        .social-section p {
+            color: #ae9fa7;
+            margin: 10px auto 30px;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .social {
+            padding: 12px 22px;
+            border: 1px solid #745265;
+            border-radius: 30px;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .social:hover {
+            background: #c96f95;
+            border-color: #c96f95;
+        }
+
+        .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+        }
+
+        .gallery-card {
+            background: rgba(54,28,42,.75);
+            border-radius: 22px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,.06);
+            box-shadow: 0 20px 50px rgba(0,0,0,.35);
+            transition: .35s;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(216,137,169,.4);
+        }
+
+        /* INFORMACIÓN */
+
+        .gallery-info {
+            padding: 28px;
+        }
+
+        .gallery-info h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 30px;
+            font-weight: normal;
+            margin-bottom: 8px;
+        }
+
+        .gallery-info p {
+            color: #a99ba2;
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
+
+        
+
+        @media(max-width:850px) {
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            padding: 35px 20px;
+            color: #887982;
+            font-size: 12px;
+        }
+
+        footer strong {
+            color: #d889a9;
+        }
+
+        /* =========================
+           ANIMACIÓN
+        ========================= */
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width: 850px) {
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-photo img {
+                height: 500px;
+            }
+
+        }
+
+        @media(max-width: 550px) {
+
+            .menu a {
+                font-size: 11px;
+                padding: 7px 10px;
+            }
+
+            h1 {
+                font-size: 65px;
+            }
+
+            .section-heading h2 {
+                font-size: 40px;
+            }
+
+            section {
+                padding: 65px 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<script>
+    function moverGaleria(boton, direccion) {
+        const tarjeta = boton.closest(".gallery-card");
+        const galeria = tarjeta.querySelector(".photo-slider");
+        const fotos = galeria.querySelectorAll("img");
+
+        let indice = Number(tarjeta.dataset.indice || 0);
+
+        indice += direccion;
+        indice = Math.max(0, Math.min(indice, fotos.length - 1));
+
+        tarjeta.dataset.indice = indice;
+
+        galeria.scrollTo({
+            left: indice * galeria.clientWidth,
+            behavior: "smooth"
+        });
+
+        actualizarBotones(galeria);
+    }
+
+    function actualizarBotones(galeria) {
+        const tarjeta = galeria.closest(".gallery-card");
+        const fotos = galeria.querySelectorAll("img");
+        const indice = Number(tarjeta.dataset.indice || 0);
+
+        const botonIzquierdo = tarjeta.querySelector(".gallery-arrow.prev");
+        const botonDerecho = tarjeta.querySelector(".gallery-arrow.next");
+
+        botonIzquierdo.style.display = indice === 0 ? "none" : "flex";
+        botonDerecho.style.display = indice === fotos.length - 1 ? "none" : "flex";
+    }
+
+    document.querySelectorAll(".gallery-card").forEach(function(tarjeta) {
+        tarjeta.dataset.indice = "0";
+        actualizarBotones(tarjeta.querySelector(".photo-slider"));
+    });
+</script>
+
+<body>
+
+<!-- =========================
+     MENÚ
+========================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <!-- CAMBIA ESTE ARCHIVO POR TU LOGO -->
+        <a href="#inicio">
+            <img src="logo.PNG" alt="InDraw Lee" class="logo">
+        </a>
+
+        <div class="menu">
+
+            <a href="#inicio">Inicio</a>
+
+            <a href="#videos">Videos</a>
+
+            <a href="#fotos">Fotografías</a>
+
+            <a href="#invitacion">Invitación</a>
+
+            <a href="#contacto">InDraw_Lee</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     INICIO
+========================= -->
+
+<main id="inicio">
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <div class="small-title">
+                Una celebración para recordar
+            </div>
+
+            <h1>
+                Johana
+            </h1>
+
+            <h2>
+                Mis XV Años
+            </h2>
+
+            <p class="hero-description">
+                Bienvenidos a la galería especial de los XV años de Johana.
+                Aquí podrás revivir los momentos más importantes de esta
+                celebración a través de fotografías y videos.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#videos" class="btn btn-primary">
+                    Ver videos
+                </a>
+
+                <a href="#fotos" class="btn btn-outline">
+                    Ver fotografías
+                </a>
+
+                <a href="#invitacion" class="btn btn-outline">
+                    Ver invitación
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-photo">
+
+            <!-- CAMBIA ESTA FOTO -->
+            <img
+                src="entrada.PNG"
+                alt="Johana - XV años"
+            >
+
+            <div class="photo-decoration"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         AVISO
+    ========================= -->
+
+    <div class="notice">
+
+        <p>
+            <strong>Importante:</strong>
+            Esta es una página temporal creada para la entrega de los
+            recuerdos audiovisuales de los XV años de Johana.
+            Se recomienda descargar fotografías y videos lo antes posible,
+            ya que los enlaces y el acceso a esta página podrían dejar de
+            estar disponibles posteriormente.
+        </p>
+
+    </div>
+
+
+<!-- =========================
+     VIDEOS
+========================= -->
+
+    <section id="videos">
+
+        <div class="section-heading">
+
+            <span>Recuerdos audiovisuales</span>
+
+            <h2>
+                Los Momentos de Johana
+            </h2>
+
+            <p>
+                Disfruta nuevamente de cada uno de los momentos especiales
+                de esta celebración.
+            </p>
+
+        </div>
+
+
+        <div class="video-grid">
+
+
+            <!-- VIDEO 1 -->
+
+            <article class="video-card">
+
+                <div class="video-number">
+                    Video 01
+                </div>
+
+                <h3>
+                    Crónica de los XV Años
+                </h3>
+
+                <p class="video-description">
+                    Una selección de fotografías y momentos de la vida de Johana
+                    presentados cronológicamente.
+                </p>
+
+                <div class="video-preview">
+
+                    <img
+                        src="parque 3.jpg"
+                        alt="Crónica de los XV Años de Johana">
+
+                </div>
+
+                <div class="video-buttons">
+
+                    <a
+                        href="https://adobe.ly/4qXMHBn"
+                        target="_blank"
+                        class="video-btn">
+
+                        Ver video y descargar
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- VIDEO 2 -->
+
+            <article class="video-card">
+
+                <div class="video-number">
+                    Video 02
+                </div>
+
+                <h3>
+                    Ceremonia en la Iglesia
+                </h3>
+
+                <p class="video-description">
+                    Los momentos más significativos de la ceremonia
+                    religiosa.
+                </p>
+
+                <div class="video-preview">
+
+                    <img
+                        src="iglesia 1.jpg"
+                        alt="Ceremonia en la Iglesia">
+
+                </div>
+
+                <div class="video-buttons">
+
+                    <a
+                        href="https://adobe.ly/4ysGXCh"
+                        target="_blank"
+                        class="video-btn">
+
+                        Ver video y descargar
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- VIDEO 3 -->
+
+            <article class="video-card">
+
+                <div class="video-number">
+                    Video 03
+                </div>
+
+                <h3>
+                    Resumen - Una Noche para Recordar
+                </h3>
+
+                <p class="video-description">
+                    Una recopilación de los momentos más especiales
+                    de toda la celebración.
+                </p>
+
+                <div class="video-preview">
+
+                    <img
+                        src="fiesta 1.jpg"
+                        alt="Recap de los XV años">
+
+                </div>
+
+                <div class="video-buttons">
+
+                    <a
+                        href="https://adobe.ly/4cxdb6K"
+                        target="_blank"
+                        class="video-btn">
+
+                        Ver video y descargar
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- VIDEO 4 -->
+
+            <article class="video-card">
+
+                <div class="video-number">
+                    Video 04
+                </div>
+
+                <h3>
+                    La Gran Entrada de Johana
+                </h3>
+
+                <p class="video-description">
+                    El momento en que Johana hace su entrada y es presentada
+                    ante todos sus invitados.
+                </p>
+
+                <div class="video-preview">
+
+                    <img
+                        src="inicio.jpg"
+                        alt="Entrada de Johana">
+
+                </div>
+
+                <div class="video-buttons">
+
+                    <a
+                        href="https://adobe.ly/4gZwfMu"
+                        target="_blank"
+                        class="video-btn">
+
+                        Ver video y descargar
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- VIDEO 5 -->
+
+            <article class="video-card">
+
+                <div class="video-number">
+                    Video 05
+                </div>
+
+                <h3>
+                    El Brindis
+                </h3>
+
+                <p class="video-description">
+                    Un momento especial dedicado a Johana durante
+                    la celebración.
+                </p>
+
+                <div class="video-preview">
+
+                    <img
+                        src="brindis.jpg"
+                        alt="Brindis de los XV años">
+
+                </div>
+
+                <div class="video-buttons">
+
+                    <a
+                        href="https://adobe.ly/4x9rFkQ"
+                        target="_blank"
+                        class="video-btn">
+
+                        Ver video y descargar
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- VIDEO 6 -->
+
+            <article class="video-card">
+
+                <div class="video-number">
+                    Video 06
+                </div>
+
+                <h3>
+                    El Vals de Johana
+                </h3>
+
+                <p class="video-description">
+                    Una de las presentaciones más esperadas de la noche.
+                </p>
+
+                <div class="video-preview">
+
+                    <img
+                        src="val.jpg"
+                        alt="Vals de Johana">
+
+                </div>
+
+                <div class="video-buttons">
+
+                    <a
+                        href="https://adobe.ly/4iaMBnD"
+                        target="_blank"
+                        class="video-btn">
+
+                        Ver video y descargar
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- VIDEO 7 -->
+
+            <article class="video-card">
+
+                <div class="video-number">
+                    Video 07
+                </div>
+
+                <h3>
+                    Baile - Coreografía Moderna
+                </h3>
+
+                <p class="video-description">
+                    Una presentación llena de energía y movimiento.
+                </p>
+
+                <div class="video-preview">
+
+                    <img
+                        src="moderno.jpg"
+                        alt="Baile moderno">
+
+                </div>
+
+                <div class="video-buttons">
+
+                    <a
+                        href="https://adobe.ly/3Vgoydh"
+                        target="_blank"
+                        class="video-btn">
+
+                        Ver video y descargar
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- VIDEO 8 -->
+
+            <article class="video-card">
+
+                <div class="video-number">
+                    Video 08
+                </div>
+
+                <h3>
+                    Quebradita
+                </h3>
+
+                <p class="video-description">
+                    Una coreografía emocionante y llena de acrobacias.
+                </p>
+
+                <div class="video-preview">
+
+                    <img
+                        src="vaquera.jpg"
+                        alt="Baile temático de vaquería">
+
+                </div>
+
+                <div class="video-buttons">
+
+                    <a
+                        href="https://adobe.ly/4x5LoSb"
+                        target="_blank"
+                        class="video-btn">
+
+                        Ver video y descargar
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- VIDEO 9 -->
+
+            <article class="video-card">
+
+                <div class="video-number">
+                    Video 09
+                </div>
+
+                <h3>
+                    Baile - Segunda Coreografía
+                </h3>
+
+                <p class="video-description">
+                    Una segunda presentación moderna protagonizada
+                    por Johana.
+                </p>
+
+                <div class="video-preview">
+
+                    <img
+                        src="ultimo baile.jpg"
+                        alt="Segunda coreografía">
+
+                </div>
+
+                <div class="video-buttons">
+
+                    <a
+                        href="https://adobe.ly/3TdJlh6"
+                        target="_blank"
+                        class="video-btn">
+
+                        Ver video y descargar
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- VIDEO 10 -->
+
+            <article class="video-card">
+
+                <div class="video-number">
+                    Video 10
+                </div>
+
+                <h3>
+                    Mariachi
+                </h3>
+
+                <p class="video-description">
+                    Los últimos momentos de la celebración junto al
+                    mariachi, la música y todos los invitados.
+                </p>
+
+                <div class="video-preview">
+
+                    <img
+                        src="mariachi.jpg"
+                        alt="Mariachi - cierre de la celebración">
+
+                </div>
+
+                <div class="video-buttons">
+
+                    <a
+                        href="https://adobe.ly/4d5Kv4X"
+                        target="_blank"
+                        class="video-btn">
+
+                        Ver video y descargar
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+    <!-- =========================
+         FOTOGRAFÍAS
+    ========================= -->
+
+
+
+    <section id="fotos"> 
+
+        <div class="section-heading"> 
+            <span>Galerías fotográficas</span> 
+            <h2>Fotografías de Johana</h2> 
+            <p> 
+                Una selección de momentos especiales de los XV años. 
+                Puedes ver la galería completa y descargar tus fotografías. 
+            </p> 
+        </div> 
+
+        <div class="gallery-grid"> 
+
+            <!-- SESIÓN DE XV AÑOS -->
+            <div class="gallery-card"> 
+
+                <div class="photo-preview">
+
+                    <button 
+                        class="gallery-arrow prev" 
+                        onclick="moverGaleria(this, -1)"
+                        aria-label="Fotografía anterior">
+                        ‹
+                    </button>
+
+                    <div class="photo-slider">
+
+                        <img src="parque 1.jpg" 
+                            alt="Johana - Sesión de XV años">
+
+                        <img src="parque 2.jpg" 
+                            alt="Johana - Sesión de XV años">
+
+                        <img src="parque 3.jpg" 
+                            alt="Johana - Sesión de XV años">
+
+                        <img src="parque 4.jpg" 
+                            alt="Johana - Sesión de XV años">
+
+                    </div>
+
+                    <button 
+                        class="gallery-arrow next" 
+                        onclick="moverGaleria(this, 1)"
+                        aria-label="Siguiente fotografía">
+                        ›
+                    </button>
+
+                </div>
+
+                <div class="gallery-info"> 
+
+                    <h3>Sesión de XV Años</h3> 
+
+                    <p> 
+                        Fotografías de la sesión especial de Johana. 
+                    </p> 
+
+                    <a href="https://adobe.ly/4bH4CG0" 
+                    target="_blank" 
+                    class="btn btn-primary"> 
+                        Ver galería completa 
+                    </a> 
+
+                </div> 
+
+            </div> 
+
+
+            <!-- IGLESIA Y CELEBRACIÓN -->
+            <div class="gallery-card"> 
+
+                <div class="photo-preview">
+
+                    <button 
+                        class="gallery-arrow prev" 
+                        onclick="moverGaleria(this, -1)"
+                        aria-label="Fotografía anterior">
+                        ‹
+                    </button>
+
+                    <div class="photo-slider">
+
+                        <img src="iglesia 2.jpg" 
+                            alt="Johana - Iglesia">
+
+                        <img src="iglesia 1.jpg" 
+                            alt="Johana - Iglesia">
+
+                        <img src="fiesta 1.jpg" 
+                            alt="Johana - Celebración">
+
+                        <img src="fiesta 2.jpg" 
+                            alt="Johana - Celebración">
+
+                    </div>
+
+                    <button 
+                        class="gallery-arrow next" 
+                        onclick="moverGaleria(this, 1)"
+                        aria-label="Siguiente fotografía">
+                        ›
+                    </button>
+
+                </div>
+
+                <div class="gallery-info"> 
+
+                    <h3>Iglesia & Celebración</h3> 
+
+                    <p> 
+                        Momentos de la ceremonia y celebración de los XV años. 
+                    </p> 
+
+                    <a href="https://adobe.ly/4x9rFkQ" 
+                    target="_blank" 
+                    class="btn btn-primary"> 
+                        Ver galería completa 
+                    </a> 
+
+                </div> 
+
+            </div> 
+
+        </div> 
+
+    </section>
+
+
+    <!-- =========================
+         INVITACIÓN
+    ========================= -->
+
+    <section id="invitacion">
+
+        <div class="section-heading">
+
+            <span>Un recuerdo especial</span>
+
+            <h2>
+                Invitación de Johana
+            </h2>
+
+            <p>
+                Vuelve a consultar la invitación original de esta
+                celebración.
+            </p>
+
+        </div>
+
+
+        <div class="invitation-container">
+
+            <!--
+
+            COLOCA AQUÍ EL NOMBRE DE TU PDF.
+
+            Ejemplo:
+
+            invitacion-johana.pdf
+
+            -->
+
+            <div class="canva-container">
+                <iframe
+                    loading="lazy"
+                    src="https://www.canva.com/design/DAHOMe9-Iiw/qN_wvkATQ-SxkxXopKiA_w/view?embed"
+                    allowfullscreen="allowfullscreen"
+                    allow="fullscreen">
+                </iframe>
+            </div>
+
+
+            <div style="text-align:center; margin-top:20px;">
+
+                <a
+                    href="https://canva.link/6u2m5mg1bbjwotv"
+                    target="_blank"
+                    class="btn btn-primary">
+
+                    Abrir invitación completa
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         REDES SOCIALES
+    ========================= -->
+
+    <section id="contacto" class="social-section">
+
+        <span class="small-title">
+            Capturamos momentos que permanecen
+        </span>
+
+        <h2>
+            InDraw_Lee
+        </h2>
+
+        <p>
+            Conoce más de nuestro trabajo audiovisual,
+            fotografía y contenido visual.
+        </p>
+
+
+        <div class="social-buttons">
+
+            <!-- CAMBIA LOS LINKS -->
+
+            <a
+                href="https://wa.me/+529994719450?text=%20Hola,%20Me%20gustaria%20trabajar%20contigo"
+                target="_blank"
+                class="social">
+
+                WhatsApp
+
+            </a>            
+            <a
+                href="https://www.instagram.com/indraw_lee?igshid=MXMzaXFpc3J6aDJvbg%3D%3D"
+                target="_blank"
+                class="social">
+
+                Instagram
+
+            </a>
+
+
+            <a
+                href="https://www.facebook.com/profile.php?id=100089300569818"
+                target="_blank"
+                class="social">
+
+                Facebook
+
+            </a>
+
+
+            <a
+                href="https://www.tiktok.com/@indraw_lee"
+                target="_blank"
+                class="social">
+
+                TikTok
+
+            </a>
+
+
+            <a
+                href="https://www.youtube.com/channel/UCXNPQcqk59bA9_2bn9dpyKw"
+                target="_blank"
+                class="social">
+
+                YouTube
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 <strong>InDraw_Lee</strong>
+        · Recuerdos de los XV años de Johana
+    </p>
+
+    <p style="margin-top:8px;">
+        Página temporal de entrega audiovisual
+    </p>
+
+</footer>
+
+
+</body>
+</html> 
